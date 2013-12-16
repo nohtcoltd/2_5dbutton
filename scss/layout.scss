@@ -1,0 +1,32 @@
+html {
+  text-align: center;
+  width: 100%;
+  margin: 100px auto;
+  body {
+    display: inline-block;
+  }
+  .sample-set-1 {
+    > a {
+      display: table;
+      margin-bottom: 15px;
+    }
+  }
+  .sample-set-2 {
+    > a {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    .pattern-4 {
+      margin-right: 0px;
+    }
+  }
+  .sample-set-3 {
+    > a {
+      margin: 5px;
+      float: left;
+    }
+    .pattern-3 {
+      clear: both;
+    }
+  }
+}

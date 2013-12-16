@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "LigatureSymbols";
+  src: url("../font/LigatureSymbols-2.11.eot");
+  src: url("../font/LigatureSymbols-2.11.eot?#iefix") format("embedded-opentype"),
+       url("../font/LigatureSymbols-2.11.woff") format("woff"),
+       url("../font/LigatureSymbols-2.11.ttf") format("truetype"),
+       url("../font/LigatureSymbols-2.11.svg#LigatureSymbols") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+  
+.icon-font {
+  font-family: "LigatureSymbols";
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+
+@mixin inline-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1
+}
+
+@mixin transition($sec, $easing: linear) {
+  transition: all $sec $easing;
+  -moz-transition: all $sec $easing;
+  -webkit-transition: all $sec $easing;
+  -o-transition: all $sec $easing;
+}
+
+@mixin user-select($select: none) {
+  user-select: $select;
+  -moz-user-select: $select;
+  -webkit-user-select: $select;
+  -ms-user-select: $select;    
+}
+
+@mixin general-button($label-size, $icon-size, $label-color, $popup-dist, $horizontal-padding, $vertical-padding, $radius, $speed, $button-color, $side-darkness, $darken: darken($button-color, $side-darkness)) {
+  @include inline-block;
+  @include user-select;
+  @include transition(0ms);
+  position: relative;
+  top: 0px;
+  border-radius: $radius;
+  background-color: rgba($button-color, 1);
+  cursor: pointer;
+  text-decoration: none;
+  .button-content {
+    @include transition(0ms);
+    display: table;
+    border-radius: 0px 0px $radius $radius;
+    padding: $horizontal-padding ($vertical-padding/2);
+    color: $label-color;
+    box-shadow: 0px 0px 0px 0px rgba($darken, 0);
+    .button-text {
+      display: table-cell;
+      vertical-align: middle;
+      text-decoration: none;
+      padding: 0px ($vertical-padding/2);
+      font-size: $label-size;
+      @if $label-size < $icon-size {
+        line-height:($icon-size / $label-size) + 0em;
+      } @else {
+        line-height: 1em;
+      }
+    }
+    .icon-font {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0px ($vertical-padding/2);
+      font-size: $icon-size;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: $radius;
+    border-bottom: 0px solid rgba($darken, 0);
+    background-color: rgba($button-color, 0);
+  }
+  &:hover {
+    @include transition($speed, ease-in-out);
+    background-color: rgba(lighten($button-color, 3%), 1);
+    top: -$popup-dist;
+    .button-content {
+      @include transition($speed, ease-in-out);
+      box-shadow: 0px $popup-dist 0px 0px rgba($darken, 1);
+    }
+    &:before {
+      @include transition($speed, ease-in-out);
+      border-bottom: $popup-dist solid rgba($darken, 0); 
+    }
+  }
+  &:active {
+    @include transition(0ms);
+    top: 0px;
+    background-color: rgba(darken($button-color, 5%), 1);
+    box-shadow: 0px($popup-dist / 5) + 1 0px 0px rgba($darken, 1) inset; 
+    .button-content {
+      @include transition(0ms);
+      box-shadow: 0px 0px 0px 0px rgba(darken($button-color, $side-darkness + 5%), 0);
+    }
+    &:before {
+      @include transition(0ms);
+      top: -$popup-dist;
+      border-bottom: 0px solid rgba($darken, 0);
+      padding-bottom: $popup-dist;
+    }    
+  }
+}
+
+.pattern-1 {
+  @include general-button(0px, 40px, #f8f8f8, 5px, 10px, 20px, 8px, 50ms, #b5c23a, 15%)
+}
+
+.pattern-2 {
+  @include general-button(0px, 40px, #f8f8f8, 5px, 10px, 19px, 8px, 50ms, #4587c0, 15%)
+}
+
+.pattern-3 {
+  @include general-button(0px, 40px, #f8f8f8, 5px, 10px, 20px, 8px, 50ms, #c94240, 15%)
+}
+
+.pattern-4 {
+  @include general-button(0px, 40px, #f8f8f8, 5px, 10px, 21px, 8px, 50ms, #474747, 15%)
+}
