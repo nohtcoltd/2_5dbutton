@@ -1,0 +1,15 @@
+@import "general_button.scss";
+
+.general-button {
+  $label-size:;
+  $icon-size:;
+  $label-color:;
+  $popup-dist:;
+  $horizontal-padding:;
+  $vertical-padding:;
+  $radius:;
+  $speed:;
+  $button-color:;
+  $side-darkness:;
+  @include general-button($label-size, $icon-size, $label-color, $popup-dist, $horizontal-padding, $vertical-padding, $radius, $speed, $button-color, $side-darkness)
+}

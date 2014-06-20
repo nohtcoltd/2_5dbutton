@@ -1,84 +1,105 @@
 2.5dBUTTON
 ==========
-[**Ligature Symbols**][Ligature Symbols]を使用した、浮き上がるボタンのライブラリです。  
-実際の押しボタンのように側面が表示されるので、リンクテキストなどを押下可能なボタンとして表示できます。
+Using [**Ligature Symbols**][Ligature Symbols], a unique button library.
+Because they have a push button-like style, you can use them to display clickable buttons in place of link text.
 
-アイコンはGUIに使用されているものや、企業ロゴなど239種類。  
-該当する単語を入力するだけで簡単に使用できます。  
-png, gifなどの画像は必要ありません。
+There are 239 types of icons including items utilizing the GUI and corporate logos,
+and can be utilized by simply typing the corresponding word.
+There is no need to use image types such as png and gif.
 
-HTML, SCSSのみの構成で、簡単にカスタマイズできます。
+With only HTML and SCSS configuration, you can easily customize it.
 
-ジェネレーターによるWEBページでの作成はこちらから  
-[**2.5dBUTTON**][2.5dBUTTON]
 
 Installation
 ============
-* ZIPでダウンロード
-
-* [**2.5dBUTTON**][2.5dBUTTON]にてジェネレーターで作成してダウンロード
+* Download ZIP
+* Download created buttons with [**2.5dBUTTON**][2.5dBUTTON] Generator.
 
 Usage:HTML
 ==========
-ボタンとして使用したい要素に固有の名前をつけ、`<div class="button-content">`とその子要素を入れます。
+Give a distinct name to the elements you would like to make into a button, and input `<div class="button-content">` and child elements.
 
-    <a class="pattern-1">  
+    <a class="general-button">
       <div class="button-content">
         <span class="icon-font">view</span>
         <span class="button-text">SAMPLE1</span>
       </div>
-    </a>  
+    </a>
 
 ICON
 ----
-Ligature Symbolsを使用しています。  
-[**Ligature Symbols**][Ligature Symbols]のウェブサイトを参照して`<span class="icon-font"></span>`に、アイコンに該当する単語を入力してください。  
-アイコンを指定しない場合は`<span class="icon-font"></span>`を削除してください。  
+You can use Ligature Symbols.
+References [**Ligature Symbols**][Ligature Symbols], input a corresponding word for the icon to `<span class="icon-font"></span>`.
+If the icon is not assigned, please delete `<span class="icon-font"></span>`.
 
-    <span class="icon-font">view</span>  
+    <span class="icon-font">view</span>
 
 TEXT
 ----
-`<span class="button-text"></span>`内に入力します。  
-テキストを指定しない場合は`<span class="button-text"></span>`を削除してください。
+Input text to `<span class="button-text"></span>`.
+If the text is not assigned, please delete `<span class="button-text"></span>`.
 
-    <span class="button-text">SAMPLE1</span>  
+    <span class="button-text">SAMPLE1</span>
 
 Usage:SCSS
 ==========
-`@mixin general-button`を、固有の名前を持つ要素に`@include`して使います。  
+Import `scss/general_button.scss' to your scss.
+Please modify '@import' path in accordance with the environment.
 
-    @mixin general-button($label-size, $icon-size, $label-color, $popup-dist, $horizontal-padding, $vertical-padding, $radius, $speed, $button-color, $side-darkness, $darken: darken($button-color, $side-darkness)) {
-    
-    ...
+Add the distinctly named element configured in HTML to '@include.'
 
+    @import "scss/general_button.scss"
+
+    .general-button {
+      $label-size:;
+      $icon-size:;
+      $label-color:;
+      $popup-dist:;
+      $horizontal-padding:;
+      $vertical-padding:;
+      $radius:;
+      $speed:;
+      $button-color:;
+      $side-darkness:;
+      @include general-button($label-size, $icon-size, $label-color, $popup-dist, $horizontal-padding, $vertical-padding, $radius, $speed, $button-color, $side-darkness)
     }
 
-    .pattern-1 {
-      @include general-button(15px, 27px, #f8f8f8, 5px, 1px, 14px, 5px, 50ms, #b5c23a, 15%)
-    }
-
-
-変更できる値  
+Variables
 ------------
 
-* $label-size: テキストの大きさ  
-* $icon-size: アイコンの大きさ  
-* $label-color: テキストの色  
-* $popup-dist: ホバー時の移動距離  
-* $horizontal-padding: 上下の間隔  
-* $vertical-padding: 左右の間隔  
-* $radius: 角の丸さ  
-* $speed: ホバーの速度  
-* $button-color: 背景色  
-* $side-darkness: ボタン側面の影の濃さ  
+* $label-size: `px`
+* $icon-size: `px`
+* $label-color: `Hex`
+* $popup-dist: `px`
+* $horizontal-padding: `px`
+* $vertical-padding: `px`
+* $radius: `px`
+* $speed: `ms`
+* $button-color: `Hex`
+* $side-darkness: `%`
+
+Every variable element of the buttons is set up.
+Referencing the above list, input values for each variable.
+
+    .general-button {
+      $label-size: 18px;
+      $icon-size: 27px;
+      $label-color: #4385bf;
+      $popup-dist: 3px;
+      $horizontal-padding: 2px;
+      $vertical-padding: 10px;
+      $radius: 3px;
+      $speed: 50ms;
+      $button-color: #ffffff;
+      $side-darkness: 15%;
+      @include general-button($label-size, $icon-size, $label-color, $popup-dist, $horizontal-padding, $vertical-padding, $radius, $speed, $button-color, $side-darkness)
+    }
+
 
 ICON
 ----
-Ligature Symbolsを適用します。  
-`@fontface`と`.icon-font`をSCSS内に入れてください。  
-`@font-face`では`font`ディレクトリのパスを指定しています。  
-ディレクトリを移動・変更した場合は書き換えてください。
+Ligature Symbols is applied to ‘@font-face’ ‘.icon-font’ inside ‘general_button.scss.’
+Please modify the font path in accordance with the environment.
 
     @font-face {
       font-family: "LigatureSymbols";
@@ -90,7 +111,7 @@ Ligature Symbolsを適用します。
       font-weight: normal;
       font-style: normal;
     }
-  
+
     .icon-font {
       font-family: "LigatureSymbols";
       -webkit-text-rendering: optimizeLegibility;
@@ -110,27 +131,35 @@ Ligature Symbolsを適用します。
       font-feature-settings: "liga" 1, "dlig" 1;
     }
 
+Operability confirmed
+=====================
+
+Browser Support
+* Google Chrome
+* Firefox
+* Safari
+* Opera
+* Internet Explorer 10+
+
+
+Not using Ligature Symbols
+* Internet Explorer 9+
+
 Author
 ======
 
-**NOHT CO.,LTD.**
+**Yuhei Yamamori**
 
 License
 =======
 
-[**2.5dBUTTON**][2.5dBUTTON] is lisenced under [the MIT License (MIT)][MIT_license]  
-Copyright (c) 2013 NOHT CO.,LTD.  
+[**2.5dBUTTON**][2.5dBUTTON] is lisenced under [the MIT License (MIT)][MIT_license]
+Copyright NOHT CO.,LTD.
 
-[**Ligature Symbols**][Ligature Symbols] is lisenced under [the SIL Open Font License 1.1][Open Font License 1.1]  
-`font`ディレクトリ内の以下のファイルはLigature Symbolsの著作物です。
+The fonts bundled here are not distributed under the terms of the MIT License.
+They were created by @kudakurage and are available under the terms of the SIL Open Font License (OFL).
 
-    LigatureSymbols-2.11.eot  
-    LigatureSymbols-2.11.otf  
-    LigatureSymbols-2.11.svg  
-    LigatureSymbols-2.11.ttf  
-    LigatureSymbols-2.11.woff  
-
-[2.5dBUTTON]: http:// "2.5dBUTTON"  
-[Ligature Symbols]: http://kudakurage.com/ligature_symbols/ "Ligature Symbols"  
-[MIT_license]: http:// "MTT_license"  
+[2.5dBUTTON]: http://www.noht.co.jp/2_5dbutton/ "2.5dBUTTON"
+[Ligature Symbols]: http://kudakurage.com/ligature_symbols/ "Ligature Symbols"
+[MIT_license]: http://opensource.org/licenses/MIT "MIT_license"
 [Open Font License 1.1]: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL "Open Font License 1.1"

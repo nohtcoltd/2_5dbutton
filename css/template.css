@@ -1,0 +1,67 @@
+/*
+Syntax error: Invalid CSS after "  $label-size:": expected expression (e.g. 1px, bold), was ";"
+        on line 4 of /home/ymmr/projects/2.5dBUTTON_sample/scss/template.scss
+
+1: /home/ymmr/projects/2.5dBUTTON_sample/scss/template.scss
+
+Backtrace:
+/home/ymmr/projects/2.5dBUTTON_sample/scss/template.scss:4
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:1148:in `expected'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/script/lexer.rb:199:in `expected!'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/script/parser.rb:471:in `assert_expr'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/script/parser.rb:49:in `parse'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:1022:in `sass_script'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:514:in `variable'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:554:in `block_child'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:543:in `block_contents'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:535:in `block'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:529:in `ruleset'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:553:in `block_child'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:546:in `block_contents'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:82:in `stylesheet'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:27:in `parse'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:342:in `_to_tree'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:315:in `_render'
+/var/lib/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:262:in `render'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `block in modified'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block (2 levels) in run'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `each'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:17:in `block in run'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `loop'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/backends/polling.rb:15:in `run'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
+/var/lib/gems/1.9.1/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `call'
+/var/lib/gems/1.9.1/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+/usr/local/bin/compass:19:in `load'
+/usr/local/bin/compass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"  $label-size:\": expected expression (e.g. 1px, bold), was \";\"\A         on line 4 of /home/ymmr/projects/2.5dBUTTON_sample/scss/template.scss\A \A 1: /home/ymmr/projects/2.5dBUTTON_sample/scss/template.scss"; }
