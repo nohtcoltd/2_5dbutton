@@ -118,4 +118,33 @@
       padding-bottom: $popup-dist;
     }    
   }
+  .touch & {
+    &:hover {
+      background-color: rgba($button-color, 1);
+      top: 0px;
+      .button-content {
+        box-shadow: 0px 0px 0px 0px rgba($button-color, 1);
+      }
+      &:before {
+        border-bottom: 0px solid rgba($darken, 0);
+      }
+    }
+
+    &:active {
+      @include transition(0ms);
+      top: 0px;
+      background-color: rgba(darken($button-color, 5%), 1);
+      box-shadow: 0px($popup-dist / 5) + 1 0px 0px rgba($darken, 1) inset; 
+      .button-content {
+        @include transition(0ms);
+        box-shadow: 0px 0px 0px 0px rgba(darken($button-color, $side-darkness + 5%), 0);
+      }
+      &:before {
+        @include transition(0ms);
+        top: -$popup-dist;
+        border-bottom: 0px solid rgba($darken, 0);
+        padding-bottom: $popup-dist;
+      }    
+    }
+  }
 }

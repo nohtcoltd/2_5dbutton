@@ -1,13 +1,14 @@
 2.5dBUTTON
 ==========
 Using [**Ligature Symbols**][Ligature Symbols], a unique button library.
-Because they have a push button-like style, you can use them to display clickable buttons in place of link text.
+They have a push button-like style, so you can use them to display clickable buttons in place of link text.
 
 There are 239 types of icons including items utilizing the GUI and corporate logos,
 and can be utilized by simply typing the corresponding word.
 There is no need to use image types such as png and gif.
 
 With only HTML and SCSS configuration, you can easily customize it.
+And with [**Modernizr.js**][Modernizr.js] plugin, you can support touch devices easily.
 
 
 Installation
@@ -98,7 +99,7 @@ Referencing the above list, input values for each variable.
 
 ICON
 ----
-Ligature Symbols is applied to ‘@font-face’ ‘.icon-font’ inside ‘general_button.scss.’
+Ligature Symbols is applied to '@font-face' '.icon-font' inside 'general_button.scss'.
 Please modify the font path in accordance with the environment.
 
     @font-face {
@@ -131,6 +132,16 @@ Please modify the font path in accordance with the environment.
       font-feature-settings: "liga" 1, "dlig" 1;
     }
 
+Usage:JS
+==========
+If you want to support "Touch devices", please include modernizr.js.
+Please modify the script path in accordance with the environment.
+
+    <head>
+      <script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
+    </head>
+
+
 Operability confirmed
 =====================
 
@@ -141,10 +152,6 @@ Browser Support
 * Opera
 * Internet Explorer 10+
 
-
-Not using Ligature Symbols
-* Internet Explorer 9+
-
 Author
 ======
 
@@ -153,13 +160,16 @@ Author
 License
 =======
 
-[**2.5dBUTTON**][2.5dBUTTON] is lisenced under [the MIT License (MIT)][MIT_license]
+[**2.5dBUTTON**][2.5dBUTTON] is lisenced under [the MIT License (MIT)][MIT_license].
 Copyright NOHT CO.,LTD.
 
 The fonts bundled here are not distributed under the terms of the MIT License.
 They were created by @kudakurage and are available under the terms of the SIL Open Font License (OFL).
 
+[**Modernizr.js**][Modernizr.js] is lisenced under [the MIT License (MIT)][MIT_license].
+
 [2.5dBUTTON]: http://www.noht.co.jp/2_5dbutton/ "2.5dBUTTON"
 [Ligature Symbols]: http://kudakurage.com/ligature_symbols/ "Ligature Symbols"
 [MIT_license]: http://opensource.org/licenses/MIT "MIT_license"
 [Open Font License 1.1]: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL "Open Font License 1.1"
+[Modernizr.js]: http://modernizr.com/ "Modernizr.js"
