@@ -52,6 +52,7 @@
   background-color: rgba($button-color, 1);
   cursor: pointer;
   text-decoration: none;
+  line-height: 1;
   .button-content {
     @include transition(0ms);
     display: table;
