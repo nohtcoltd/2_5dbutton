@@ -1,17 +1,17 @@
 @import "general_button.scss";
 
 .pattern-1 {
-  @include general-button(0px, 40px, #f8f8f8, 5px, 10px, 20px, 8px, 50ms, #b5c23a, 15%)
+  @include general-button(0px, 40px, #f8f8f8, 5px, 20px, 10px, 8px, 50ms, #b5c23a, 15%)
 }
 
 .pattern-2 {
-  @include general-button(0px, 40px, #f8f8f8, 5px, 10px, 19px, 8px, 50ms, #4587c0, 15%)
+  @include general-button(0px, 40px, #f8f8f8, 5px, 19px, 10px, 8px, 50ms, #4587c0, 15%)
 }
 
 .pattern-3 {
-  @include general-button(0px, 40px, #f8f8f8, 5px, 10px, 20px, 8px, 50ms, #c94240, 15%)
+  @include general-button(0px, 40px, #f8f8f8, 5px, 20px, 10px, 8px, 50ms, #c94240, 15%)
 }
 
 .pattern-4 {
-  @include general-button(0px, 40px, #f8f8f8, 5px, 10px, 21px, 8px, 50ms, #474747, 15%)
+  @include general-button(0px, 40px, #f8f8f8, 5px, 21px, 10px, 8px, 50ms, #474747, 15%)
 }
